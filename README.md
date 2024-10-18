@@ -1,6 +1,6 @@
 Firmware for: [Urchin Keyboard](https://github.com/duckyb/urchin)
 
-## Getting started
+## Getting started (test)
 
 **Are you trying to make your own ZMK firmware?**  
 [Here are the steps you need to take.](./GETTING_STARTED.md)
