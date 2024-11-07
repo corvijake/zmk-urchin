@@ -3,7 +3,7 @@
 # to the top level board and shield arrays, for more
 # control, add individual board + shield combinations to
 # the `include` property, e.g:
-#
+# nice_view_adapter
 # board: [ "nice_nano_v2" ]
 # shield: [ "corne_left", "corne_right" ]
 # include:
@@ -14,8 +14,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: urchin_left nice_view_adapter nice_view
+    shield: urchin_left nice_view
   - board: nice_nano_v2
-    shield: urchin_right nice_view_adapter nice_view
+    shield: urchin_right nice_view
   - board: nice_nano_v2
     shield: settings_reset
