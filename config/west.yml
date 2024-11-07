@@ -1,14 +1,11 @@
 manifest:
   remotes:
-    # zmk official
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
       # originally kyek / duckyb
     - name: corvijake
       url-base: https://github.com/corvijake
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: corvijake
       revision: main
       import: app/west.yml
     - name: urchin-zmk-module
