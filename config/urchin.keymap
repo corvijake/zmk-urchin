@@ -8,7 +8,6 @@
 #define SYM 1
 #define EXT 2
 #define FNC 3
-// #define SYM2 4
 #define SETTINGS 4
 // -----------------
 
@@ -33,13 +32,6 @@
 			bindings = <&kp>, <&kp>;
 		};
 
-	
-        del_mod: delete_modify {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt LSHIFT BSPC>, <&kp BSPC>;
-        };
 	};
 
 	macros {
@@ -55,22 +47,17 @@
 
 	combos {
 		compatible = "zmk,combos";
-		// both right thumb keys
-	//	combo_accent {
-	//		timeout-ms = <200>;
-	//		key-positions = <32 33>;
-	//		bindings = <&mo ACCENT>;
-	//	};
+
 		// internal-left & external-right thumb keys
 		combo_super_delete {
 			timeout-ms = <200>;
 			key-positions = <30 33>;
 			bindings = <&kp BSPC>;
 		};
-		// both left thumb keys
+		// both right thumb keys
 		combo_settings {
 			timeout-ms = <200>;
-			key-positions = <30 31>;
+			key-positions = <32 33>;
 			bindings = <&mo SETTINGS>;
 		};
 	};
