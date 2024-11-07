@@ -6,9 +6,8 @@
 // Layer definitions
 #define BASE 0
 #define SYM 1
-#define EXT 2
-#define FNC 3
-#define SETTINGS 4
+#define UTIL 2
+#define SETTINGS 3
 // -----------------
 
 &sk {
@@ -52,12 +51,12 @@
 		combo_super_delete {
 			timeout-ms = <200>;
 			key-positions = <30 33>;
-			bindings = <&mo SETTINGS>;
+			bindings = <&mo BSPC>;
 		};
 		// both right thumb keys
 		combo_settings {
 			timeout-ms = <200>;
-			key-positions = <32 33>;
+			key-positions = <30 31>;
 			bindings = <&mo SETTINGS>;
 		};
 	};
@@ -71,7 +70,7 @@
 			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
 			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp SQT
 			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
-					&mt LSHIFT BSPC &lt EXT ENTER        &lt SYM TAB   &kp SPACE
+					&mt LSHIFT BSPC &lt UTIL ENTER        &lt SYM TAB   &kp SPACE
 			>;
 		};
 
@@ -87,7 +86,7 @@
 		};
 
 		// Computer controls and arrow kews
-		ext_layer {
+		util_layer {
 			label = "Util.";
 			bindings = <
 			&kp ESC  &kp C_BRI_DN &kp C_BRI_UP &none     &none    	    &kp C_PREV  &kp C_PP &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP
