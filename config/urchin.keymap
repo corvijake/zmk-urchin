@@ -51,7 +51,7 @@
 		combo_super_delete {
 			timeout-ms = <200>;
 			key-positions = <30 33>;
-			bindings = <&mo BSPC>;
+			bindings = <&kp BSPC>;
 		};
 		// both right thumb keys
 		combo_settings {
