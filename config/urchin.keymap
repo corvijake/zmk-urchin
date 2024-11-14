@@ -47,16 +47,10 @@
 	combos {
 		compatible = "zmk,combos";
 
-		// internal-left & external-right thumb keys
-		combo_super_delete {
-			timeout-ms = <200>;
-			key-positions = <30 33>;
-			bindings = <&kp BSPC>;
-		};
-		// both right thumb keys
+		// right thumb & bottom pinky
 		combo_settings {
 			timeout-ms = <200>;
-			key-positions = <30 31>;
+			key-positions = <29 33>;
 			bindings = <&mo SETTINGS>;
 		};
 	};
@@ -67,10 +61,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
-			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp SQT
-			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
-					&mt LSHIFT BSPC &lt UTIL ENTER        &lt SYM TAB   &kp SPACE
+			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp SQT 
+			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L   &kp P
+			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &lt UTIL SLASH
+				&mt LSHIFT ENTER &kp BSPC        &kp SPACE &lt SYM TAB
 			>;
 		};
 
@@ -89,9 +83,9 @@
 		util_layer {
 			label = "Util.";
 			bindings = <
-			&kp ESC  &kp C_BRI_DN &kp C_BRI_UP &none     &none    	    &kp C_PREV  &kp C_PP &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP
-			&kp LEFT &kp DOWN     &kp UP       &kp RIGHT &none  	    &none &sk LGUI &sk LALT &sk LCTRL &none
-			&none    &none        &none        &none     &none          &none &none &none &none &none
+			&kp ESC  &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP	    &none &none &none &none &none
+			&none    &kp LEFT     &kp UP       &kp RIGHT    &C_PP 	            &none &sk LGUI &sk LALT &sk LCTRL &none
+			&none    &none        &DOWN        &C_PREV      &C_NEXT             &none &none &none &none &none
 												&kp LSHIFT &trans        &trans  &kp LSHIFT 
 			>;
 		};
