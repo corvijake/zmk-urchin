@@ -73,7 +73,7 @@
 			label = "Sym.";
 			bindings = <
 			&kp N1    &kp N2    &kp N3   &kp N4    &kp N5		    &kp N6   &kp N7   &kp N8   &kp N9    &kp N0
-			&kp TILDE &kp MINUS &kp HASH &kp ASTRK &kp EQUAL        &kp SEMI &sk LGUI &sk LALT &sk LCTRL &kp COLON
+			&kp TILDE &kp MINUS &kp HASH &kp ASTRK &kp EQUAL         &kp SEMI &sk LGUI &sk LALT &sk LCTRL &kp COLON
 			&kp EXCL  &kp LBRC  &kp LBKT &kp LPAR  &kp BSLH 	    &kp FSLH &kp RPAR &kp LBKT &kp LBRC  &kp QMARK
 										&kp LSHIFT  &trans       &trans &trans
 			>;
