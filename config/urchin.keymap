@@ -36,7 +36,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <80>; // Allows for re-tapping the same key to produce a held version (holding backspace)
+            quick-tap-ms = <200>; // Allows for re-tapping the same key to produce a held version (holding backspace)
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
