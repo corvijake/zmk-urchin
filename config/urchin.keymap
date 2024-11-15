@@ -42,6 +42,12 @@
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
+
+		quick: quick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp B &kp U &kp D &kp D &kp H &kp A &kp ENTER>;
+        };
 	};
 
 	combos {
@@ -85,7 +91,7 @@
 			bindings = <
 			&kp ESC  &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP	    &none &none &none &none &none
 			&none    &kp LEFT     &kp UP       &kp RIGHT    &kp C_PP 	            &none &sk LGUI &sk LALT &sk LCTRL &none
-			&none    &none        &kp DOWN        &kp C_PREV      &kp C_NEXT             &none &none &none &none &none
+			&none    &none        &kp DOWN        &kp C_PREV      &kp C_NEXT             &none &none &none &quick &none
 												&kp LSHIFT &trans        &trans  &kp LSHIFT 
 			>;
 		};
