@@ -30,6 +30,17 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
+		
+		// Balanced flavor of hold-tap, hopefully works with shift and homerow mods
+		// "Balanced" triggers the hold-behavior only after the second key is released
+		bm: balanced_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <80>; // Allows for re-tapping the same key to produce a held version (holding backspace)
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
 
 	};
 
@@ -67,10 +78,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp Q &kp W &kp E &kp R &kp T            &kp Y &kp U  &kp I     &kp O   &kp P
-			&kp A &kp S &kp D &kp F &kp G          &kp H &kp J  &kp K     &kp L   &kp SQT
-			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &lt UTIL SLASH
-				&mt LSHIFT ENTER &kp BSPC        &kp SPACE &lt SYM TAB
+			&kp Q &kp W       &kp E      &kp R      &kp T                     &kp Y &kp U  &kp I     &kp O   &kp P
+			&kp A &bm LCTRL S &bm LALT D &bm LGUI F &kp G          &kp H &bm LGUI J  &bm LALT K     &bm LCTRL L   &kp SQT
+			&kp Z &kp X &kp C &kp V &kp B                          &kp N &kp M  &kp COMMA &kp DOT &lt SLASH
+						&lt UTIL ENTER &bm LSHIFT BSPC        &kp SPACE &lt SYM TAB
 			>;
 		};
 
