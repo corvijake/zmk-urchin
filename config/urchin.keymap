@@ -37,7 +37,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <1000>; // experimenting with an essentially infinite timeout for hold, increasing the chance that the tap is resolved
             quick-tap-ms = <200>; // Allows for re-tapping the same key to produce a held version (holding backspace)
-			require-prior-idle-ms = <200> // When typing fast, the key will resolve on key-down without the possibility of triggering the mod
+			require-prior-idle-ms = <200>; // When typing fast, the key will resolve on key-down without the possibility of triggering the mod
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
