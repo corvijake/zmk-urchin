@@ -35,7 +35,7 @@
 		bms: balanced_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>; // experimenting with an essentially infinite timeout for hold, increasing the chance that the tap is resolved, doesnt work because it prevents the shift click
+            tapping-term-ms = <200>; 
             quick-tap-ms = <200>; // Allows for re-tapping the same key to produce a held version (holding backspace)
 			require-prior-idle-ms = <200>; // When typing fast, the key will resolve on key-down without the possibility of triggering the mod
             flavor = "balanced";
@@ -110,8 +110,8 @@
 			bindings = <
 			&kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U  &kp I &kp O &kp P
 			&kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K  &kp L &kp SQT
-			&kp Z &kp X &kp C &kp V &kp B          &kp N &kp M  &tdg &tda &tdc
-			&lt UTIL ENTER &bms LSHIFT BSPC        &kp SPACE &lt SYM TAB
+			&kp Z &kp X &kp C &kp V &kp B          &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
+						&lt UTIL ENTER &bms LSHIFT BSPC        &kp SPACE &lt SYM TAB
 			>;
 		};
 
