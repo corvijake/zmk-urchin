@@ -18,6 +18,16 @@
 
 / {
 	behaviors {
+		shinter: shift_enter {
+            // Formulated for a good shift-hold enter tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred"; // actuates shift on inturrupting key press
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-while-undecided; // Allows for shift + mouse click
+            bindings = <&kp LSHIFT>, <&kp ENTER>;
+        };
 		// Enables holding the first mod-tap key
 		// by performing a tap-release-hold sequence.
 		// To use it: "&qt KEYCODE1 KEYCODE2"
@@ -91,7 +101,7 @@
 			&kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U  &kp I &kp O &kp P
 			&kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K  &kp L &kp SQT
 			&kp Z &kp X &kp C &kp V &kp B          &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
-						&lt UTIL BSPC &kp LSHIFT       &kp SPACE &lt SYM ENTER
+						&lt UTIL BSPC &shinter       &kp SPACE &lt SYM ENTER
 			>;
 		};
 
